@@ -1,4 +1,5 @@
-import { HiTrash } from "react-icons/hi2";
+import { HiTrash } from "react-icons/hi2"
+import styles from './Todo.module.css'
 
 export default function Todo({ todo, onUpdate, onRemove }) {
   const { text, status } = todo;
@@ -12,15 +13,20 @@ export default function Todo({ todo, onUpdate, onRemove }) {
   }
 
   return(
-    <li>
+    <li className={styles.todo}>
       <input 
+        className={styles.checkbox}
         type="checkbox" 
         id='checkbox' 
         checked={status === 'completed'}
         onChange={handleChange}
       />
-      <label htmlFor="checkbox">{text}</label>
-      <button onClick={handleRemove}><HiTrash  /></button>
+      <label htmlFor="checkbox" className={styles.text}>{text}</label>
+      <span className={styles.icon}>
+        <button className={styles.button} onClick={handleRemove}>
+          <HiTrash  />
+        </button>
+      </span>
     </li>
   )
 }
