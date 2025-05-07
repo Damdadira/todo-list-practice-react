@@ -1,14 +1,22 @@
-import { useReducer } from 'react'
+import { useEffect, useReducer } from 'react'
 import AddTodo from './AddTodo';
 import Todo from './Todo';
 import styles from './TodoList.module.css'
 
 export default function TodoList({ filter }) {
-  const [todos, dispatch] = useReducer(reducer, initTodoList);
+  /**
+   * 상태가 변경될때도 readTodosFromLocalStorage 함수가 호출되고 있어서 콜백함수로 관리
+   * 초기 렌더링 시 단 한번만 실행
+   */
+  const [todos, dispatch] = useReducer(reducer, undefined, () => readTodosFromLocalStorage());
 
   const handleAdd = (item) => dispatch({ type: 'add', item });
   const handleUpdate = (item) => dispatch({ type: 'update', item });
   const handleRemove = (item) => dispatch({ type: 'remove', item });
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   const filtered = getFilteredItems(todos, filter);
   return (
@@ -50,6 +58,11 @@ function reducer(todos, action) {
       return todos.map(todo => todo.id === item.id ? item : todo )
     }
   }
+}
+
+function readTodosFromLocalStorage() {
+  const todos = localStorage.getItem('todos');
+  return todos ? JSON.parse(todos) : [];
 }
 
 const initTodoList = [
