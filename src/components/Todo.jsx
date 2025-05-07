@@ -1,10 +1,11 @@
 import { HiTrash } from "react-icons/hi2";
 
 export default function Todo({ todo, onUpdate, onRemove }) {
-  const { text, active } = todo;
+  const { text, status } = todo;
 
   const handleChange = (e) => {
-    onUpdate({ ...todo, active: e.target.checked });
+    const status = e.target.checked ? 'completed' : 'active';
+    onUpdate({ ...todo, status });
   }
   const handleRemove = () => {
     onRemove(todo);
@@ -15,7 +16,7 @@ export default function Todo({ todo, onUpdate, onRemove }) {
       <input 
         type="checkbox" 
         id='checkbox' 
-        checked={active === true}
+        checked={status === 'completed'}
         onChange={handleChange}
       />
       <label htmlFor="checkbox">{text}</label>
