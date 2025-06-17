@@ -11,7 +11,7 @@ export default function AddTodo({ onAdd }) {
 
     if(text.trim().length === 0) return;
 
-    onAdd({ id: uuidv4(), text, active: true });
+    onAdd({ id: uuidv4(), text, active: true, status: 'active' });
     setText('');
   };
   
