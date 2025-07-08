@@ -6,7 +6,7 @@
 
 ## 🖥 화면 구성
 <details>
-  <summary><h3 style="display:inline; margin-left:4px">홈 화면</h3></summary>
+  <summary><h3 style="display:inline; margin-left:4px">1️⃣ 홈 화면</h3></summary>
   
   <p align="center">
     <img src="/src/assets/imgs/light/img_todo_light.png" width="500"/>
@@ -15,7 +15,7 @@
 </details>
 
 <details>
-  <summary><h3 style="display:inline; margin-left:4px">할 일 목록 화면</h3></summary>
+  <summary><h3 style="display:inline; margin-left:4px">2️⃣ 할 일 목록 화면</h3></summary>
   
   <p align="center">
     <img src="/src/assets/imgs/light/img_todo_light_active.png" width="500"/>
@@ -24,7 +24,7 @@
 </details>
 
 <details>
-  <summary><h3 style="display:inline; margin-left:4px">완료 목록 화면</h3></summary>
+  <summary><h3 style="display:inline; margin-left:4px">3️⃣ 완료 목록 화면</h3></summary>
   
   <p align="center">
     <img src="/src/assets/imgs/light/img_todo_light_completed.png" width="500"/>
@@ -35,7 +35,7 @@
 
 ## 💡 주요 기능 및 구현
 <details>
-  <summary><h3 style="display:inline; margin-left:4px">1️⃣ 추가</h3></summary>
+  <summary><h3 style="display:inline; margin-left:4px">추가</h3></summary>
 
   - **아이템 추가:** 텍스트 입력 후 'Enter'를 누르거나 'Add' 버튼을 클릭하면 아이템을 하나씩 추가할 수 있습니다.
   
@@ -43,7 +43,7 @@
 </details>
 
 <details>
-  <summary><h3 style="display:inline; margin-left:4px">2️⃣ 삭제</h3></summary>
+  <summary><h3 style="display:inline; margin-left:4px">삭제</h3></summary>
 
   - **아이템 삭제:** 리스트 오른쪽에 있는 휴지통을 클릭하여 아이템을 하나씩 삭제할 수 있습니다.
 
@@ -51,7 +51,7 @@
 </details>
 
 <details>
-  <summary><h3 style="display:inline; margin-left:4px">3️⃣ 완료</h3></summary>
+  <summary><h3 style="display:inline; margin-left:4px">완료</h3></summary>
 
   - **완료된 아이템 체크:** 리스트 왼쪽에 있는 체크박스를 클릭하면 스타일과 남은 할 일의 개수가 변경됩니다.
 
