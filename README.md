@@ -31,7 +31,7 @@
     <img src="/src/assets/imgs/dark/img_todo_dark_completed.png" width="500"/>
   </p>
 </details>
-<br/><br/>
+<br/>
 
 ## 💡 주요 기능 및 구현
 <details>
